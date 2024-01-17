@@ -13,4 +13,3 @@ class RandomPassword:
         return res
 
 lst_pass = [RandomPassword(psw_chars = "qwertyuiopasdfghjklzxcvbnm0123456789!@#$%&*", max_length = 20, min_length = 5)() for _ in range(3)]
-print(lst_pass)
