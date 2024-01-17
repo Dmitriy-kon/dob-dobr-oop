@@ -1,3 +1,5 @@
+from typing import Any
+
 class Dimensions:
     attrs = ("MIN_DIMENSION", "MAX_DIMENSION")
 
