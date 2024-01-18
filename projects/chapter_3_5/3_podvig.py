@@ -1,7 +1,3 @@
-import functools
-from math import sqrt
-
-
 class TrackLine:
     def __init__(self, to_x, to_y, max_speed) -> None:
         self._to_x = to_x
