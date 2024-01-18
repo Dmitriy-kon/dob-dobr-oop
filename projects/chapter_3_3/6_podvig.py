@@ -28,3 +28,8 @@ class Complex:
 
     def __abs__(self):
         return sqrt(self.real * self.real + self.img * self.img)
+
+
+cmp = Complex(7, 8)
+cmp.real, cmp.img = 3, 4
+c_abs = abs(cmp)

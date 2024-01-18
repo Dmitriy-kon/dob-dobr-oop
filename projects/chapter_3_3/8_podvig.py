@@ -8,7 +8,7 @@ class DeltaClock:
     
     def __str__(self) -> str:
         res = len(self)
-        return datetime.fromtimestamp(res).strftime("%H:%M:%S")
+        return datetime.fromtimestamp(res).strftime("%H: %M: %S")
     
     def __len__(self):
         res = self.clock1.get_time() - self.clock2.get_time()
