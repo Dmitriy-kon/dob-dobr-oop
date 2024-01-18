@@ -1,16 +1,15 @@
 class NewList:
     def __init__(self, lst=None):
         if lst:
-            self.__list = list(lst)
+            self.data = list(lst)
         else:
-            self.__list = []
+            self.data = []
 
     def get_list(self):
-        return self.__list
+        return self.data
 
     def __sub__(self, other):
         if not isinstance(other, (list, NewList)):
-            # if type(other) not in (list, NewList):
             raise TypeError("Используются только списки или Newlist")
 
         if isinstance(other, NewList):

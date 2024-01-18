@@ -4,9 +4,6 @@ class Book:
         self.author = author
         self.year = year
 
-    pass
-
-
 class Lib:
     def __init__(self) -> None:
         self.book_list: list[Book] = list()
@@ -29,7 +26,7 @@ class Lib:
 
     def __isub__(self, book: Book):
         if isinstance(book, (Book, int)):
-            self - book
+            return self - book
     
     def __len__(self):
         return len(self.book_list)
