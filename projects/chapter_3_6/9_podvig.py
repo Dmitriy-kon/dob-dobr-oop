@@ -39,18 +39,18 @@ class Triangle:
         p = (self.a + self.b + self.c) / 2
         return sqrt(p * (p - self.a) * (p - self.b) * (p - self.c))
 
-    # def __setattr__(self, key, value) -> None:
-    #     if (key == "a" and not self.__is_triangle(value, self.b, self.c) or \
-    #         key == "b" and not self.__is_triangle(self.a, value, self.c) or \
-    #         key == "c" and not self.__is_triangle(self.a, self.b, value)):
-    #         raise ValueError("с указанными длинами нельзя образовать треугольник")
-    #     super().__setattr__(key, value)
+    def __setattr__(self, key, value) -> None:
+        if (key == "a" and not self.__is_triangle(value, self.b, self.c) or \
+            key == "b" and not self.__is_triangle(self.a, value, self.c) or \
+            key == "c" and not self.__is_triangle(self.a, self.b, value)):
+            raise ValueError("с указанными длинами нельзя образовать треугольник")
+        super().__setattr__(key, value)
     
-    # @staticmethod
-    # def __is_triangle(a, b, c):
-    #     if a and b and c:
-    #         return a< b + c and b < a + c and c < a + b
-    #     return True
+    @staticmethod
+    def __is_triangle(a, b, c):
+        if a and b and c:
+            return a< b + c and b < a + c and c < a + b
+        return True
         
 
 
